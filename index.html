@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ish — 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: #0e0e11;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+
+section {
+  display: none;
+  min-height: 100vh;
+  padding: 90px 30px;
+  text-align: center;
+}
+
+section.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soft   { background:#f6f1eb; color:#111; }
+.deep   { background:#0f1118; }
+.kiss   { background:#160b10; }
+.future { background:#0e0e11; }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 28px;
+}
+
+.big-note {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 2.8rem;
+  margin: 36px 0;
+}
+
+.long-note {
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 1.15rem;
+  line-height: 2.1;
+  opacity: 0.95;
+}
+
+.sub {
+  opacity: 0.75;
+  font-size: 1rem;
+}
+
+.btn {
+  margin-top: 60px;
+  padding: 14px 50px;
+  border-radius: 40px;
+  border: none;
+  background: #ffffff;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* PHOTO */
+.single-photo {
+  width: 260px;
+  max-width: 80vw;
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+/* EXTRA GLOW KISS PAGE */
+.kiss-icon {
+  font-size: 100px;
+  margin-bottom: 30px;
+  text-shadow:
+    0 0 25px rgba(255,90,140,0.8),
+    0 0 55px rgba(255,90,140,0.6),
+    0 0 90px rgba(255,90,140,0.4);
+}
+
+/* PREMIUM HEART IMAGE */
+.heart-img {
+  width: 220px;
+  max-width: 70vw;
+  margin-bottom: 40px;
+  filter:
+    drop-shadow(0 0 30px rgba(255,0,80,0.9))
+    drop-shadow(0 0 70px rgba(255,0,80,0.7))
+    drop-shadow(0 0 120px rgba(255,0,80,0.5));
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<section class="active">
+  <div>
+    <h1>This is for you, Ish.</h1>
+    <p class="sub">Read it slowly. I meant every word.</p>
+    <button class="btn" onclick="next()">Start</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="soft">
+  <div>
+    <div class="big-note">How it started</div>
+    <p class="long-note">
+      We met on Tinder on <b>25 October</b>.
+      Just another match at first,
+      just another conversation that could have faded.
+    </p>
+    <p class="long-note">
+      But it didn’t.
+      Talking to you felt easy in a way that surprised me.
+      I found myself wanting the conversation to continue.
+    </p>
+    <button class="btn" onclick="next()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="deep">
+  <div>
+    <div class="big-note">3 November</div>
+    <p class="long-note">
+      Our first call.
+      <b>1 hour and 56 minutes</b>.
+    </p>
+    <p class="long-note">
+      I remember how calm I felt hearing your voice.
+      No pressure. No pretending.
+      Just a quiet sense that I was exactly where I wanted to be.
+    </p>
+    <p class="long-note">
+      When the call ended, I didn’t rush back to anything else.
+      I just sat there, holding on to the feeling.
+    </p>
+    <button class="btn" onclick="next()">Keep reading</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="soft">
+  <div>
+    <div class="big-note">When it became real</div>
+    <p class="long-note">
+      Somewhere between those conversations,
+      something shifted.
+      We stopped being just two people talking
+      and became something that mattered.
+    </p>
+    <p class="long-note">
+      It wasn’t loud.
+      It was steady.
+      And it felt right.
+    </p>
+    <button class="btn" onclick="next()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="deep">
+  <div>
+    <h1>Our first hug</h1>
+    <p class="long-note">
+      I still remember our first hug.
+      How natural it felt.
+      Like my body already knew you.
+    </p>
+    <p class="long-note">
+      It was simple.
+      And it stayed with me.
+    </p>
+    <button class="btn" onclick="next()">More</button>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="kiss">
+  <div>
+    <div class="kiss-icon">💋</div>
+    <div class="big-note">Dwarka, Delhi</div>
+    <p class="long-note">
+      The streets.
+      The night.
+      And you.
+    </p>
+    <p class="long-note">
+      I kissed you there — again and again —
+      because I wanted you to feel chosen.
+      Because in that moment, nothing felt more natural.
+    </p>
+    <button class="btn" onclick="next()">Don’t stop</button>
+  </div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="deep">
+  <div>
+    <h1>This picture</h1>
+    <img src="photos/first.jpg" class="single-photo" alt="Us">
+    <p class="long-note">
+      When I look at this picture,
+      I don’t just see how we looked.
+      I remember how safe I felt standing next to you.
+    </p>
+    <p class="long-note">
+      It reminds me of certainty.
+      Of warmth.
+      Of the quiet confidence that we were building something real.
+    </p>
+    <button class="btn" onclick="next()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 8 -->
+<section class="soft">
+  <div>
+    <h1>Promises</h1>
+    <p class="long-note">
+      Ish, I promise I’ll stay.
+      Not just when things are easy,
+      but when they need patience and effort.
+    </p>
+    <p class="long-note">
+      I promise honesty.
+      Communication.
+      And choosing you, again and again.
+    </p>
+    <button class="btn" onclick="next()">More</button>
+  </div>
+</section>
+
+<!-- PAGE 9 -->
+<section class="deep">
+  <div>
+    <h1>What I want</h1>
+    <p class="long-note">
+      I want more time with you.
+      More nights that feel calm and close.
+      More moments that don’t need words.
+    </p>
+    <p class="long-note">
+      I want to see you again on the <b>6th</b>.
+      I want to hold you.
+      I want to keep choosing this.
+    </p>
+    <button class="btn" onclick="next()">Almost there</button>
+  </div>
+</section>
+
+<!-- PAGE 10 -->
+<section class="future">
+  <div>
+    <img src="photos/heart.png" class="heart-img" alt="Heart">
+    <h1>I love you, Ishu.</h1>
+    <p class="sub">— Prince</p>
+  </div>
+</section>
+
+<script>
+let current = 0;
+const sections = document.querySelectorAll("section");
+const music = document.getElementById("bgMusic");
+let started = false;
+
+function next() {
+  if (!started) {
+    music.play().catch(()=>{});
+    started = true;
+  }
+  sections[current].classList.remove("active");
+  current++;
+  if (sections[current]) sections[current].classList.add("active");
+}
+</script>
+
+</body>
+</html>
