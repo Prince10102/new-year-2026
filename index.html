@@ -1,0 +1,162 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year ❤️</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Trebuchet MS", cursive;
+    background: #f3dcc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .screen {
+    display: none;
+    width: 90%;
+    max-width: 420px;
+    background: #f7e7d3;
+    border-radius: 18px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: fade 0.6s ease;
+  }
+
+  .screen.active {
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #5a2e1a;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    color: #7a3f2b;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #6b3a28;
+    line-height: 1.6;
+  }
+
+  .btn {
+    margin-top: 25px;
+    background: #d64b2a;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .btn.outline {
+    background: transparent;
+    border: 2px solid #d64b2a;
+    color: #d64b2a;
+  }
+
+  ul {
+    text-align: left;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul li {
+    margin: 12px 0;
+    font-size: 1rem;
+  }
+
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Screen 1 -->
+<div class="screen active">
+  <h1>Happy New Year 🎆</h1>
+  <h2>2026</h2>
+  <p>See what I made for you</p>
+  <button class="btn" onclick="next()">Start</button>
+</div>
+
+<!-- Screen 2 -->
+<div class="screen">
+  <h1>A Few Things I Want To Say ✨</h1>
+  <p>You make moments feel lighter 🤍</p>
+  <button class="btn" onclick="next()">Tap to continue</button>
+</div>
+
+<!-- Screen 3 -->
+<div class="screen">
+  <h1>Ready for 2026?</h1>
+  <p>A new chapter is waiting to be written…</p>
+  <button class="btn" onclick="next()">Ignite the spark ✨</button>
+</div>
+
+<!-- Screen 4 -->
+<div class="screen">
+  <h1>Goals for 2026</h1>
+  <ul>
+    <li>☐ Visit a place you've always wanted</li>
+    <li>☐ Learn or read more consistently</li>
+    <li>☐ Take better care of mind & body</li>
+    <li>☐ Spend time with people who matter</li>
+  </ul>
+  <button class="btn" onclick="next()">Let's go →</button>
+</div>
+
+<!-- Screen 5 -->
+<div class="screen">
+  <h1>One Last Note 💌</h1>
+  <p>
+    As the new year begins, I just wanted to share a few good thoughts with you.
+    <br><br>
+    I hope 2026 brings you peace, growth, and many small wins.
+  </p>
+  <button class="btn" onclick="next()">Seal it ✉️</button>
+</div>
+
+<!-- Screen 6 -->
+<div class="screen">
+  <h1>Sealed ✨</h1>
+  <p>Happy New Year!  
+     May 2026 be kind, exciting, and full of opportunities 🌟</p>
+  <button class="btn outline" onclick="restart()">Restart the journey</button>
+</div>
+
+<script>
+  const screens = document.querySelectorAll(".screen");
+  let current = 0;
+
+  function next() {
+    screens[current].classList.remove("active");
+    current++;
+    if (current < screens.length) {
+      screens[current].classList.add("active");
+    }
+  }
+
+  function restart() {
+    screens[current].classList.remove("active");
+    current = 0;
+    screens[current].classList.add("active");
+  }
+</script>
+
+</body>
+</html>
